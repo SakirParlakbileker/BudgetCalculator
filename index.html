@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="heading">Budget Calculator</h1>
+    <div class="container">
+      <h3 class="greet">
+        Welcome,
+        <input id="name-input" type="text" placeholder="Enter your name" />
+      </h3>
+      <form>
+        <div class="double">
+          <div class="form-harcama">
+            <label>Product:</label>
+            <input id="harcama" type="text" placeholder="Enter Product" />
+          </div>
+          <div class="form-fiyat">
+            <label>Price:</label>
+            <input id="fiyat" type="number" placeholder="Enter Price" />
+          </div>
+        </div>
+        <div class="double">
+          <div class="form-durum">
+            <input id="status-input" type="checkbox" />
+            <label for="status-input">Paid</label>
+          </div>
+          <button class="ekle-btn">Add</button>
+        </div>
+      </form>
+      <!-- Toplam ifadesi -->
+      <div class="toplam">
+        Total Spend: <span id="toplam-bilgi">0</span> &#8364;
+      </div>
+
+      <select id="filter-select">
+        <option value="all">All</option>
+        <option value="not-payed">NotPaid</option>
+        <option value="payed">Paid</option>
+      </select>
+
+      <!-- Liste -->
+      <div class="liste"></div>
+    </div>
+    <!-- Js Bağlama -->
+    <script src="main.js"></script>
+  </body>
+</html>
